@@ -1,0 +1,74 @@
+# --- Archivos del Sistema Windows ---
+# Esconde la base de datos de miniaturas del explorador
+Thumbs.db
+ehthumbs.db
+ehthumbs_vista.db
+# Archivo de metadatos oculto del explorador
+Desktop.ini
+# Archivo de paginación o hibernación (Creado por Windows)
+pagefile.sys
+swapfile.sys
+hiberfil.sys
+
+# --- Configuraciones del IDE (VS Code) ---
+.vscode/*
+!.vscode/extensions.json
+.history/
+.ionide/
+
+# --- Carpetas de Dependencias ---
+# Nunca deben subirse a Git porque pesan demasiado y se reinstalan
+node_modules/
+jspm_packages/
+
+# --- Compilados y Entornos ---
+# TypeScript (outDir)
+dist/
+build/
+out/
+tsc.tsbuildinfo
+
+# React / Vite
+dist-ssr/
+*.local
+.env.local
+.env.*.local
+
+# Variables de entorno y llaves
+.env
+
+# --- Dependencias de Node y Registros ---
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Logs de error y pruebas del sistema
+*.log
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+.npm
+.yarn
+.cache
+.parcel-cache
+.rpt2_cache/
+.eslintcache
+*.backup
+*.swp
+
+# --- Sistema operativo macOS (por si compartes el código) ---
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Iconos de carpetas personalizados de macOS
+Icon?
+
+# Archivos temporales de thumbnails creados por macOS
+._*
+
+# Archivos de respaldo de editores de texto
+*~
+.fuse_hidden*
