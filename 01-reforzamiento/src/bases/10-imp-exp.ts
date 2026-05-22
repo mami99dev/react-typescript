@@ -9,7 +9,7 @@
 */ 
 
 
-import { heroes, type Hero } from "./data/heroes.data" //* Si importas un type es importante anteponerle que es un type para agilizarle las cosas a TS
+import { heroes, type Hero, villains, type Villain, VillainOwner } from "./data/heroes.data" //* Si importas un type es importante anteponerle que es un type para agilizarle las cosas a TS
 
 const getHeroById = (id: number): Hero|undefined => {
   const hero = heroes.find((hero) => {
@@ -23,3 +23,11 @@ const getHeroById = (id: number): Hero|undefined => {
 }
 
 console.log(getHeroById(8))
+
+export const getVillainsByOwner = (owner: VillainOwner): Villain[]|[] => {
+  const villainsFiltered = villains.filter( (villain: Villain) => {
+    return villain.owner === owner
+  })
+
+  return villainsFiltered
+}

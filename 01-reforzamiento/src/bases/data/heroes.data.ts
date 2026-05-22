@@ -9,14 +9,14 @@ export interface Hero {
   owner: HeroOwner;
 } // No genera un 
 
-interface Villain {
+export interface Villain {
   id: number;
   name: string;
   owner: VillainOwner;
 }
 
 type HeroOwner = 'DC' | 'Marvel' // Tipos de datos son para cuando tengo valores especificos que quiero introducir 
-enum VillainOwner {
+export enum VillainOwner {
   // DC, // Valor 0
   // Marvel // Valor 1
   DC = 'DC', // Asignamos el valor 'DC' al miembro DC del enum
@@ -57,7 +57,7 @@ export const heroes: Hero[] = [
   // }, // Ts no permite poner otro tipo de HeroOwner
 ]
 
-const villains: Villain[] = [
+export const villains: Villain[] = [
   {
     id: 1,
     name: 'Dr. Octopus',
