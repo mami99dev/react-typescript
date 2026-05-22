@@ -1,5 +1,5 @@
 import './style.css'
-import './bases/09-homework'
+import './bases/10-imp-exp'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <div>

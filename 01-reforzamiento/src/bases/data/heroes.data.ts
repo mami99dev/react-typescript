@@ -2,7 +2,8 @@
 //! Enum si crea una estructura de datos en Javascript, 
 // interface y type solo existen en tiempo de compilación y no generan código JavaScript. enum si existe en tiempo de ejecución y genera código JavaScript.
 
-interface Hero {
+//? Exportar tradicionalmente
+export interface Hero {
   id: number;
   name: string;
   owner: HeroOwner;
@@ -22,7 +23,8 @@ enum VillainOwner {
   Marvel = 'Marvel' // Asignamos el valor 'Marvel' al miembro Marvel del enum
 }
 
-const heroes: Hero[] = [
+//? Exportar tradicionalmente
+export const heroes: Hero[] = [
   {
     id: 1,
     name: 'Batman',
@@ -87,3 +89,6 @@ const villains: Villain[] = [
   //   owner: 'DC' // Type '"DC"' is not assignable to type 'VillainOwner'.
   // }, // Para el caso de los Villains, al ser un enum, no se puede asignar un string directamente, sino que se debe usar la sintaxis del enum para asignar el valor correspondiente.
 ]
+
+//? Exportar por defecto
+//export default heroes
