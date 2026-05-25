@@ -1,5 +1,5 @@
 import './style.css'
-import './bases/11-promises'
+import './bases/12-fetch-api'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
 <div>
