@@ -1,0 +1,15 @@
+.item-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
+}
+
+/* Cuando se trabaja con .module.css es recomendable estandarizar los nombres con lowerCamelCase para que TS los tome mas facilmente */
+.itemText {
+  width: 150px;
+}
+
+.red {
+  color: red;
+}

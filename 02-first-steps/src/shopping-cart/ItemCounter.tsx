@@ -1,5 +1,6 @@
 import { useState } from "react"
-import './ItemCounter.css'
+// import './ItemCounter.css'
+import styles from './ItemCounter.module.css'
 
 interface ItemCounterProps {
   name: string
@@ -20,10 +21,10 @@ export const ItemCounter = (props: ItemCounterProps) => {
 
   return (
     <section
-      className="item-row"
+      className={styles['item-row']}
     >
       <span
-        className="item-text"
+        className={styles.itemText}
         style={{
           color: count === 1 ? 'red' : 'black'
         }}
