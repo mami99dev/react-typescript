@@ -21,7 +21,7 @@ const myStyle: CSSProperties = {
 export function MyAwesomeApp() {
   return (
     <>
-      <h1>{firstName}</h1>
+      <h1 data-testid='first-name-title'>{firstName}</h1>
       <h3
         style={{
           backgroundColor: '#fff055',
