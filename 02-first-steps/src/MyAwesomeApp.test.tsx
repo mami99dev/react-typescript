@@ -26,7 +26,17 @@ describe('MyAwesomeApp', () => {
     //   level: 1
     // }) //! No es recomendable en este caso porque hay mas de una etiqueta h1 y te salta un error
 
-    const h1 = screen.getByTestId('first-name-title') // Necesariamente la etiqueta debe tener una prop llamada data-testid
+    const h1 = screen.getByTestId('first-name-title') // Necesariamente la etiqueta debe tener un data attribute llamado data-testid
     expect(h1.innerHTML).toContain('Isaac')
+  })
+
+  test('should match snapshot', () => {
+    const { container } = render(<MyAwesomeApp />)
+    expect(container).toMatchSnapshot()
+  })
+
+  test('should match snapshot 2', () => {
+    render(<MyAwesomeApp />)
+    expect(screen.getByTestId('div-app')).toMatchSnapshot() ///! No es recomendable usar data attributes (data-testid) ya que son volatiles y no alteran el funcionamiento del aplicativo
   })
 })

@@ -1,0 +1,75 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`MyAwesomeApp > should match snapshot 1`] = `
+<div>
+  <div
+    data-testid="div-app"
+  >
+    <h1
+      data-testid="first-name-title"
+    >
+      Isaac
+    </h1>
+    <h3
+      style="background-color: rgb(255, 240, 85); border-radius: 10px; padding: 10px;"
+    >
+      Martinez
+    </h3>
+    <p
+      class="mi-clase-favorita"
+    >
+      Soccer
+      Ping pong
+      Swimming
+    </p>
+    <p>
+      Soccer, Ping pong, Swimming
+    </p>
+    <h1 />
+    <h2>
+      Activo
+    </h2>
+    <p
+      style="background-color: rgb(51, 18, 153); color: rgb(170, 187, 204); padding: 10px; border-radius: 35px;"
+    >
+      {"country":"MX","zipCode":"54080"}
+    </p>
+  </div>
+</div>
+`;
+
+exports[`MyAwesomeApp > should match snapshot 2 1`] = `
+<div
+  data-testid="div-app"
+>
+  <h1
+    data-testid="first-name-title"
+  >
+    Isaac
+  </h1>
+  <h3
+    style="background-color: rgb(255, 240, 85); border-radius: 10px; padding: 10px;"
+  >
+    Martinez
+  </h3>
+  <p
+    class="mi-clase-favorita"
+  >
+    Soccer
+    Ping pong
+    Swimming
+  </p>
+  <p>
+    Soccer, Ping pong, Swimming
+  </p>
+  <h1 />
+  <h2>
+    Activo
+  </h2>
+  <p
+    style="background-color: rgb(51, 18, 153); color: rgb(170, 187, 204); padding: 10px; border-radius: 35px;"
+  >
+    {"country":"MX","zipCode":"54080"}
+  </p>
+</div>
+`;
