@@ -34,7 +34,7 @@ export const ItemCounter = (props: ItemCounterProps) => {
       <button
         onClick={handleAdd}
       >+1</button>
-      <span>{count}</span>
+      <span title="item-count">{count}</span>
       <button
         onClick={handleSubtract}
       >-1</button>
