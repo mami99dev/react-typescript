@@ -1,4 +1,4 @@
-import { useState, type KeyboardEvent } from "react";
+import { useEffect, useState, type KeyboardEvent } from "react";
 
 interface Props {
   placeholder?: string;
@@ -8,6 +8,16 @@ interface Props {
 
 export const SearchBar = ({ placeholder = 'Buscar', buttonTitle, onQuery }: Props) => {
   const [query, setQuery] = useState('')
+
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      onQuery(query)
+    }, 700)
+
+    return () => {
+      clearTimeout(timeoutId)
+    } // Funcion de limpieza se ejecuta cuando el componente se desmonta o se va a volver a disparar el efecto, es decir cuando las dependencias cambian y se ejecuta la funcion callback
+  }, [query]) // En las ultimas versiones de react ya no es necesario colocar funciones en las dependencias para que el useEffect se ejecute
 
   const handleSearch = () => {
     onQuery(query)
