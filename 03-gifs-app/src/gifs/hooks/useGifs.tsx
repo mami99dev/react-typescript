@@ -1,18 +1,16 @@
-import { useState } from "react"
+import { useRef, useState } from "react"
 import type { Gif } from "../interfaces/gif.interface"
 import { getGifsByQuery } from "../actions/get-gifs-by-query.action"
-
-// Se declara afuera del componente ya que asi evitamos la perdida de informacion en el re-render del componente
-const gifsCache: Record<string, Gif[]> = {}
 
 export const useGifs = () => {
   const [previousTerms, setPreviousTerms] = useState<string[]>([])
   const [gifs, setGifs] = useState<Gif[]>([])
+  const gifsCache = useRef<Record<string, Gif[]>>({}) //$ Se hace uso de useRef para no perder los datos en los re-renderizados del componente.
 
   const handleTermClicked = async (term: string) => {
     // Si existe en memoria entonces ya no hace la peticion http
-    if (gifsCache[term]) {
-      setGifs(gifsCache[term])
+    if (gifsCache.current[term]) {
+      setGifs(gifsCache.current[term]) //$ Se accede a la propiedad current del useRef para obtener el valor actual del cache
       return
     }
 
@@ -32,7 +30,7 @@ export const useGifs = () => {
     const searchedGifs = await getGifsByQuery(query)
     setGifs(searchedGifs)
 
-    gifsCache[query] = searchedGifs
+    gifsCache.current[query] = searchedGifs
   }
 
   return {
