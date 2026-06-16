@@ -95,16 +95,13 @@ export interface FixedHeight {
 }
 
 export interface Looping {
+  mp4_size: string;
+  mp4: string;
 }
 
-export enum Rating {
-  G = "g",
-  PG = "pg",
-}
+export type Rating = 'G' | 'PG'
 
-export enum Type {
-  GIF = "gif",
-}
+export type Type = 'gif'
 
 export interface User {
   avatar_url: string;
@@ -119,10 +116,7 @@ export interface User {
   is_verified: boolean;
 }
 
-export enum Name {
-  AizenSosuke9641 = "aizen_sosuke9641",
-  Empty = "",
-}
+export type Name = "aizen_sosuke9641" | ""
 
 export interface Meta {
   status: number;
